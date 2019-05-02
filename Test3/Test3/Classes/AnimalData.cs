@@ -8,6 +8,6 @@ namespace Test3.Classes
 {
     class AnimalData
     {
-        private string Name;
+        string Name;
     }
 }
