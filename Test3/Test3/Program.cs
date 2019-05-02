@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Test3.Classes;
 
 namespace Test3
 {
@@ -10,6 +11,11 @@ namespace Test3
     {
         static void Main(string[] args)
         {
+            Dog perro = new Dog();
+            Cat gato = new Cat();
+
+            Console.WriteLine(perro.Talk());
+            Console.WriteLine(gato.Talk());
         }
     }
 }
