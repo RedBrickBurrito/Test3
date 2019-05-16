@@ -8,15 +8,13 @@ namespace Codigo1_Resolver
 {
     public class GIS
     {
-        public static void insertionSort<T>(ref T[] arr, int n ,Comparer<T> comparer = null)
+        public static void insertionSort<T>(ref T[] arr, int n) where T: IComparable 
         {
-            T[] temp;
-            temp = arr;
-            int i;
+          
+            int i,j;
             T key;
-            int j;
-            var equalityComparer = comparer ?? Comparer<T>.Default;
 
+            
             for (i = 1; i < n; i++)
             {
                 key = arr[i];
@@ -25,7 +23,7 @@ namespace Codigo1_Resolver
                 /* Move elements of arr[0..i-1], that are
                    greater than key, to one position ahead
                    of their current position */
-                while (j >= 0 && equalityComparer.Compare(arr[j],key))
+                while (j >= 0 && arr[j].CompareTo(key) > 0)
                 {
                     arr[j + 1] = arr[j];
                     j = j - 1;
